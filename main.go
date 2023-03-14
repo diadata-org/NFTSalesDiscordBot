@@ -18,7 +18,6 @@ func init() {
 	models.InitMigrations()
 	startWS := models.LoadCurrentSubscriptions()
 	bot.InitBot()
-	go services.TrackFloorPrices()
 	if startWS {
 		services.StartEventWS()
 	}
