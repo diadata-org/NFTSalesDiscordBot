@@ -31,6 +31,10 @@ var (
 	// PanicChannelID Variable to Hold ChannelID to forward all errors
 	PanicChannelID string
 
+	FloorPriceTrackerAddress string
+	FloorPriceTrackerChain   string
+	FloorPriceTrackerGuild   string
+
 	MessageFooter = discordgo.MessageEmbedFooter{
 		Text:    "Powered by DIAdata.org",
 		IconURL: "https://www.diadata.org",
@@ -46,7 +50,7 @@ func ShutDownWS() {
 func InitPanicChannel() {
 	channel := os.Getenv("PANIC_CHANNEL")
 
-	PanicChannelID = "1025726821733515314"
+	PanicChannelID = "1044583291942096906"
 	if channel == "" {
 	} else {
 		PanicChannelID = channel
